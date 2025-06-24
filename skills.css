@@ -21,6 +21,8 @@
     nav{
         margin-left: 30vw; 
         display: flex;
+        overflow-x: auto;
+        white-space:nowrap;
         flex-wrap: wrap;
         gap: 1vw;
     }
