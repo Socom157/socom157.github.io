@@ -23,6 +23,7 @@ section{
 nav{
     margin-left: 30vw; 
     display: flex;
+    overflow-x= auto;
     flex-wrap: wrap;
     gap: 18px;
 }
@@ -114,6 +115,7 @@ h1{
     nav{
     gap: 1.2vw;
     display: flex;
+    
     margin-top: 2.3vh;
     margin-left: 0.1vw;
     margin-bottom: 0;
