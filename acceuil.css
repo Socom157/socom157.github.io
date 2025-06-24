@@ -28,7 +28,7 @@ nav{
 }
 
 a{
-    flex: 1 0 4px;
+    flex: 0 0 auto;
     padding: 4px;
     color:rgb(48, 2, 85);
     text-decoration: none;
