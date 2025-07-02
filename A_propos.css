@@ -26,6 +26,34 @@ section{
       -webkit-overflow-scrolling: touch; /* Pour un bon scroll sur iOS */
     }
 
+nav{
+    margin-left: 30vw; 
+    display: flex;
+    overflow-x: auto;
+    white-space:nowrap;
+    flex-wrap: nowrap;
+    gap: 18px;
+    overflow-x: auto;             
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+  
+}
+
+
+
+a{
+    flex: 0 0 auto;
+    scroll-snap-align: start; 
+    padding: 4px;
+    color:rgb(48, 2, 85);
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    position: relative;
+    display: inline-block;
+
+}
 
 
 a::after {
