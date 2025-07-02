@@ -17,6 +17,13 @@
         border-radius: 10px;
         height: 3vw;
     }
+    .scrolle{
+    
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; /* Pour un bon scroll sur iOS */
+    }
 
     nav{
         margin-left: 30vw; 
