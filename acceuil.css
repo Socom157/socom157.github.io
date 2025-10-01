@@ -2,84 +2,76 @@ body{
     height: 100vh;
     background-color: rgb(0, 0, 7);
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 2%;
-    background-color: rgb(228, 228, 228);
-    padding:  3px 3px 3px 0px;
-    width: 90%;
-    border-radius: 10px;
-    height: 3vw;
-}
-.scrolle{
-    
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch; /* Pour un bon scroll sur iOS */
+    header{
+        width:98%;
+        display: flex;
+        align-items: center;
+        background-color:rgb(213, 212, 255);
+        margin: 5px;
+        border-radius: 5px;
+        margin-left: 1%;
+        padding: 10px;
+
+        
     }
-nav{
-    margin-left: 30vw; 
-    display: flex;
-    overflow-x: auto;
-    white-space:nowrap;
-    flex-wrap: nowrap;
-    gap: 18px;
-    overflow-x: auto;             
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; 
-  
-}
+    .logo{
+        width: 5vw;
+        height: 10vh;
+        margin-left: 2vw;
+        border-radius: 50%;
+    }
+    nav{
+        text-align: center;
+        margin-left: 18vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5vw;
+        list-style: none;
+        display: flex;   
+        flex-wrap: wrap;
+    }
+    nav a {
+        flex: 1 0 4px;
+        position: relative;
+        text-decoration: none;
+    
+        font-size: 16px;
+        font-family:'Montserrat';
+        font-weight: bold;
+        color: #07001f;
+    }
+    nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px; 
+        width: 0%;
+        height: 2px;
+        background: #002731;
+        transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }
+    nav a.active::after {
+        width: 100%;
+    }
 
 
-
-a{
-    flex: 0 0 auto;
-    scroll-snap-align: start; 
-    padding: 4px;
-    color:rgb(48, 2, 85);
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: 0.875rem;
-    position: relative;
-    display: inline-block;
-
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: rgb(9, 8, 107);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
-.image{
-    height: auto;
-    height: 6vh;
-    width: 3.5%;
-    margin-left: 1vw;
-    border-radius: 50%;
-    background-image: url(./IMG_20250606_122218_254.jpg);
-    background-position: center;
-    background-size: cover;
-}
 .mail{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 3vw;
+    font-family: 'Montserrat';
     color: black;
+    font-size: 18px;
 }
 .page{
     display: flex;
@@ -115,227 +107,339 @@ h2{
 }
 .des{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.8125rem;
+    font-family:'montserrat';
+    font-size: 15px;
 
 }
-.photo{
-    background-image: url(./photo.jpg);
+.img{
     height: auto;
     width: 100%;
     height:310px;
-    max-width:230px;
-    min-height: 100px;
+    width:22vw;
+    height: 50vh;
     padding: 5px;
     background-position: center;
     background-size: cover;
     margin-left: 20%;
     margin-top: 8vw;
+    border-radius: 0 0 0 60px;
+    box-shadow: 1px 1px 1px 3px white;
+
+}
+body {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out; /* durée : 1.2s */
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+@media screen and   (max-width:600px){
+ body{
+    height: 100vh;
+    background-color: rgb(0, 0, 7);
+}
+    header{
+        width:98%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color:rgb(213, 212, 255);
+        margin: 5px;
+        border-radius: 5px;
+        margin-left: 1%;
+        padding: 5px;
+        padding-bottom: 0;
+        
+    }
+    .logo{
+        width: 10vw;
+        height: 5vh;
+        margin-left: 2vw;
+        border-radius: 50%;
+    }
+    nav{
+        text-align: center;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        list-style: none;
+        display: flex;   
+        flex-wrap: wrap;
+         margin-bottom: 0;
+    }
+    nav a {
+        flex: 1 0 4px;
+        position: relative;
+        text-decoration: none;
+    
+        font-size: 14px;
+        font-family:'Montserrat';
+        font-weight: bold;
+       
+    }
+    nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px; 
+        width: 0%;
+        height: 2px;
+        background: #000000;
+        transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+        
+    }
+    nav a.active::after {
+        width: 100%;
+        
+    }
+    a:hover{
+        background-color: black;
+        color: aqua;
+        padding: 5px;
+        border-radius: 5px 5px 0 0;
+        transition: width 0.3s ease;
+    }
+    
+    a.active {
+    background-color: black;
+    padding: 5px;
+    color: aqua;
+    border-radius: 5px 5px 0 0;
+    transition: width 0.3s ease;
+   
+    }
+
+.mail{
+    margin-left: 3vw;
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 14px;
+}
+.page{
+    display: flex;
+    
+
+}
+.descript{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12%;
+    margin-left: 2vw;
+}
+.descripti{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 10%;
+    max-width: 40%;
+}
+h4{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 10%;
+    font-size: 16px;
+    margin-top: 10vh;
+
+}
+h2{
+    margin-top: 34vh;
+    width: 95%;
+    font-size: 17px;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(218, 245, 255);
+    position: absolute;
+    font-family: cursive;
+    margin-left: 2vw;
+
+
+}
+.des{
+    margin-top: 50vh;
+    position: absolute;
+    color: white;
+    font-family:'montserrat';
+    font-size: 15px;
+    width: 95%;
+
+}
+.img{
+    height: auto;
+    width: 100%;
+    height:310px;
+    width:50vw;
+    height: 30vh;
+    padding: 5px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5%;
+    margin-top: 8vw;
     border-radius: 0 0 0 30px;
     box-shadow: 1px 1px 1px 3px white;
 
 }
-
-@media screen and   (max-width:600px){
-    
-    section{
-    margin-left: 0vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .menu{
-    background-color: rgb(159, 159, 163);
-    width: 100%;
-    border-radius: 0;
-    height: 5vh;
-    padding: 3px 3px 0 0px;
-    }
-    .image{
-    height: auto;
-    height: 5vh;
-    width: 12vw;
-    margin: 2px;
-    border-radius: 50%;
-    background-image: url(./IMG_20250606_122218_254.jpg);
-    background-position: center;
-    background-size: cover;
-    }
-
-    nav{
-    gap: 1.2vw;
-    display: flex;
-    margin-top: 2.3vh;
-    margin-left: 0.1vw;
-    margin-bottom: 0;
-
-
-    }
-
-    a{
-    display: inline-block;
-    background-color: transparent;
-    transition: background-color 0.3s;
-    font-size: 0.76rem;
-    color: rgb(76, 238, 238);
-    padding: 5px;
-    
-    }
-    
-    a:hover{
-        background-color: black;
-        color: aqua;
-        border-radius: 8px 8px 0 0;
-        transition: width 0.3s ease;
-    }
-    
-    a.active {
-    background-color: black;
-    color: aqua;
-    border-radius: 8px 8px 0 0;
-    transition: width 0.3s ease;
-   
-    }
-    
-    .mail{
-    color: black;
-    width: 0;
-    font-size: 0;
+body {
     opacity: 0;
-    }
-    .page{
-    display: flex;
-    
+    transition: opacity 1.2s ease-in-out; /* durée : 1.2s */
+}
 
-    }
-    .descript{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15vh;
-    margin-left: 2%;
-    max-width: 30%;
-    }
-    h4{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 30%;
-    font-size: 4vw;
-
-    }
-    h2{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 30%;
-    font-size: 3.8vw;
-
-
-
-    }
-   .descripti{
-    display: flex;
-    flex-direction: column;
-    
-    
-    width: 90%;
-    }
-    .des{
-    margin-left: 2%;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.8125rem;
-    width: 90vw;
-    margin-top: 6vh;
-
-
-    }
-    .photo{
-    background-image: url(./e6a0bdf260b9bd717f0112b272740311\ \(1\).jpg);
-    height: auto;
-    width: 100%;
-    height:35vh;
-    
-    background-position: center;
-    background-size: cover;
-    margin-left: 10%;
-    margin-top: 17vw;
-    border-radius: 0 0 0 30px;
-    box-shadow: 1px 1px  white;
-
-    }
-
-    a:hover::after {
-    width: 0%;
-    }
-
+body.loaded {
+    opacity: 1;
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-     section{
-    margin-left: 0vw;
+    body{
+    height: 100vh;
+    background-color: rgb(0, 0, 7);
+}
+    header{
+        width:98%;
+        display: flex;
+        align-items: center;
+        background-color:rgb(213, 212, 255);
+        margin: 5px;
+        border-radius: 5px;
+        margin-left: 1%;
+        padding: 10px;
+
+        
+    }
+    .logo{
+        width: 5vw;
+        height: 10vh;
+        margin-left: 2vw;
+        border-radius: 50%;
+    }
+    nav{
+        text-align: center;
+        margin-left: 18vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5vw;
+        list-style: none;
+        display: flex;   
+        flex-wrap: wrap;
+    }
+    nav a {
+        flex: 1 0 4px;
+        position: relative;
+        text-decoration: none;
+    
+        font-size: 16px;
+        font-family:'Montserrat';
+        font-weight: bold;
+        color: #07001f;
+    }
+    nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px; 
+        width: 0%;
+        height: 2px;
+        background: #002731;
+        transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }
+    nav a.active::after {
+        width: 100%;
+    }
+
+
+.mail{
+    margin-left: 3vw;
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 18px;
+}
+.page{
     display: flex;
+    
+
+}
+.descript{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    }
-    .menu{
-    background-color: rgb(159, 159, 163);
-    width: 100%;
-    border-radius: 0;
-    height: 5vh;
-    padding: 3px 3px 0 0px;
-    }
-    .image{
+    margin-top: 12%;
+    margin-left: 10%;
+    max-width: 40%;
+}
+.descripti{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 10%;
+    max-width: 40%;
+}
+h4{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h2{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+.des{
+    color: white;
+    font-family:'montserrat';
+    font-size: 15px;
+
+}
+.img{
     height: auto;
-    height: 4.5vh;
-    width: 5.5vw;
-    margin-left: 1vw;
-    border-radius: 50%;
-    background-image: url(./IMG_20250606_122218_254.jpg);
+    width: 100%;
+    height:310px;
+    width:22vw;
+    height: 50vh;
+    padding: 5px;
     background-position: center;
     background-size: cover;
-    }
+    margin-left: 20%;
+    margin-top: 8vw;
+    border-radius: 0 0 0 60px;
+    box-shadow: 1px 1px 1px 3px white;
 
-    nav{
-    gap: 1.5vw;
-    display: flex;
-    margin-top: 2.6vh;
-    margin-left: 30%;
-    margin-bottom: 0;
-
-
-    }
-
-    a{
-    display: inline-block;
-    background-color: transparent;
-    transition: background-color 0.3s;
-    font-size: 1rem;
-    color: rgb(76, 238, 238);
-    padding: 5px;
-    
-    }
-    
-    a:hover{
-        background-color: black;
-        color: aqua;
-        border-radius: 8px 8px 0 0;
-        transition: width 0.3s ease;
-    }
-    
-    a.active {
-    background-color: black;
-    color: aqua;
-    border-radius: 8px 8px 0 0;
-    transition: width 0.3s ease;
-   
-    }
-    
-    .mail{
-    color: black;
-    width: 0;
-    font-size: 0;
+}
+body {
     opacity: 0;
-    }
-    a:hover::after {
-    width: 0%;
-    }
- 
+    transition: opacity 1.2s ease-in-out; /* durée : 1.2s */
+}
+
+body.loaded {
+    opacity: 1;
+}
+}
 }
